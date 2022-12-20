@@ -30,3 +30,12 @@ body {
   padding: 0;
   border: 0;
 }
+
+.greyfooter {
+  height: 40%;
+  width: 100%;
+  position: fixed;
+  bottom: -40px;
+  z-index: -10;
+  background-color: hsl(195deg, 20%, 86%);
+}

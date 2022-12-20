@@ -4,10 +4,13 @@
 }
 
 .maxWidthWrapper {
+  max-width: 1024px;
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -23,8 +26,63 @@
   margin: 0;
 }
 
-.characterWrapper {
+.characterWrapper svg {
+  position: fixed;
+  right: 0;
+  top: 128px;
+  min-height: 500px;
+
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.characterFooter {
+  height: 40vh;
+  width: 100%;
+  background-color: lightgray;
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+
+  .title,
+  .description {
+    display: none;
+  }
+
+  .maxWidthWrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .controlColumn {
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    flex: min-content;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .characterFooter {
+    z-index: -11;
+    background-color: lightgrey;
+
+  }
+
+  .maxWidthWrapper {
+    padding-top: 60vh;
+  }
+
+  .characterWrapper {
+    z-index: -10;
+    position: fixed;
+  }
+
+  .characterWrapper svg {
+    right: auto;
+  }
 }

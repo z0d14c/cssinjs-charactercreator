@@ -6,3 +6,14 @@
   text-align: center;
 }
 
+.footer a {
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    display: none;
+  }
+}
